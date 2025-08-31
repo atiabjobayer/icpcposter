@@ -4,6 +4,8 @@ import './ICPCPoster.css'; // Import the CSS file
 
 const ICPCTeamPoster = () => {
   const [teamData, setTeamData] = useState({
+    region: "ASIA WEST",
+    country: "Bangladesh",
     teamName: "SUST_Fanatics",
     university: "Shahjalal University of Science and Technology",
     icpcLogo: "https://worldfinals.icpc.global/images/brand-logo.svg", // Add ICPC logo URL here
@@ -115,8 +117,8 @@ const ICPCTeamPoster = () => {
                   </div>
                 )}
                 <div className="year-info">
-                  <div className="year-number">ASIA WEST</div>
-                  <div className="season-text">Bangladesh</div>
+                  <div className="year-number">{teamData.region}</div>
+                  <div className="season-text">{teamData.country}</div>
                 </div>
               </div>
               
@@ -274,24 +276,25 @@ const ICPCTeamPoster = () => {
           <div className="json-content">
             <pre className="json-code">
 {`{
+  "region": "ASIA WEST",
+  "country": "Bangladesh",
   "teamName": "Algorithm Masters",
   "university": "Stanford University", 
   "icpcLogo": "https://icpc.global/logo.png",
   "teamImage": "https://example.com/team.jpg",
   "members": [
     {
-      "name": "John Doe",
-      "cfUsername": "john_coder", 
-      "cfColor": "red",
-      "currentRating": 2500,
-      "maxRating": 2650
+      name: "John Doe",
+      cfUsername: "johndoe",
+      cfColor: "orange",
+      cfMaxColor: "orange",
+      cfRankTitle: "International Grandmaster",
+      currentRating: 2354,
+      maxRating: 2354
     }
   ]
 }`}
             </pre>
-            <div className="json-note">
-              <strong>CF Colors:</strong> red (Grandmaster), orange (Master), violet/purple (Expert), blue (Specialist), green (Pupil), gray (Newbie)
-            </div>
           </div>
         </details>
       </div>
