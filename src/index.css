@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: #0f172a;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ICPC Color Variables */
+:root {
+  --icpc-blue: #6082c0;
+  --icpc-red: #9a3123;
+  --icpc-yellow: #ebb424;
+}
+
+/* Athletic Typography */
+.font-black {
+  font-weight: 900 !important;
+  font-family: 'Arial Black', Arial, sans-serif;
+}
+
+/* Enhanced Shadows for ICPC Theme */
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(154, 49, 35, 0.3), 
+              0 10px 10px -5px rgba(96, 130, 192, 0.2),
+              0 0 0 1px rgba(235, 180, 36, 0.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(154, 49, 35, 0.4), 
+              0 4px 6px -2px rgba(96, 130, 192, 0.3);
+}

@@ -1,0 +1,654 @@
+/* ICPC Team Poster - React Component CSS */
+/* Import this CSS file in your App.jsx: import './ICPCPoster.css'; */
+
+/* Main Container */
+.poster-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white; /*#0f172a;*/
+  padding: 2rem;
+}
+
+.max-width-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* Input Section */
+.input-section {
+  margin-bottom: 2rem;
+}
+
+.input-card {
+  background-color: #1e293b;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border-left: 4px solid #ef4444;
+}
+
+.input-title {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input-textarea {
+  width: 100%;
+  height: 6rem;
+  background-color: #0f172a;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #475569;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  resize: vertical;
+}
+
+.input-textarea::placeholder {
+  color: #64748b;
+}
+
+/* Main Poster - 16:9 Aspect Ratio */
+.main-poster {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  aspect-ratio: 16/9;
+}
+
+/* Header Strip */
+.header-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+  background: linear-gradient(90deg, #9a3123 0%, #ebb424 50%, #6082c0 100%);
+}
+
+/* Main Content */
+.main-content {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Section */
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icpc-logo {
+  height: 4rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.icpc-logo-fallback {
+  padding: 0.75rem 1.5rem;
+  transform: skewX(-12deg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background-color: #9a3123;
+}
+
+.icpc-logo-text {
+  color: white;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+.year-info {
+  color: white;
+}
+
+.year-number {
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: 0.025em;
+}
+
+.season-text {
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ebb424;
+}
+
+.team-info {
+  text-align: right;
+}
+
+.team-name {
+  color: white;
+  font-weight: 900;
+  font-size: 2.25rem;
+  letter-spacing: -0.025em;
+}
+
+.university-name {
+  color: #cbd5e1;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.team-accent-line {
+  width: 6rem;
+  height: 0.25rem;
+  margin-left: auto;
+  margin-top: 0.5rem;
+  background-color: #6082c0;
+}
+
+/* Main Grid */
+.main-grid {
+  flex: 1;
+  padding: 0 3rem 2rem 3rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  height: 100%;
+}
+
+/* Team Photo & Stats Column */
+.photo-stats-column {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-photo-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+  height: 60%; /* Fixed height to accommodate horizontal images */
+  aspect-ratio: 4/3; /* Horizontal aspect ratio */
+}
+
+.photo-border {
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  right: -0.25rem;
+  bottom: -0.25rem;
+  background: linear-gradient(135deg, #9a3123, #6082c0);
+}
+
+.photo-inner {
+  position: relative;
+  background-color: #1e293b;
+  height: 100%;
+  border: 2px solid #6082c0;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #374151 0%, #0f172a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-placeholder-content {
+  text-align: center;
+}
+
+.photo-placeholder-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 0.75rem auto;
+  color: #6082c0;
+}
+
+.photo-placeholder-text {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+/* Team Stats */
+.team-stats {
+  background: linear-gradient(90deg, #1e293b 0%, #374151 100%);
+  border: 4px solid #9a3123;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent stats from shrinking */
+  margin: 0 -0.25rem; /* Negative margin to align with photo border */
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item.with-border {
+  border-right: 1px solid #6082c0;
+}
+
+.stat-value {
+  font-size: 1.875rem;
+  font-weight: 900;
+}
+
+.stat-value.avg-rating {
+  color: #ebb424;
+}
+
+.stat-value.peak-rating {
+  color: #6082c0;
+}
+
+.stat-label {
+  color: #e2e8f0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Player Profiles Column */
+.players-column {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align to top instead of space-between */
+  gap: 0.5rem; /* Add consistent gap between cards */
+}
+
+.player-card {
+  position: relative;
+  flex: 1; /* Make each card take equal space */
+}
+
+.player-card:last-child {
+  margin-bottom: 0;
+}
+
+.player-card-inner {
+  background: linear-gradient(90deg, #1e293b 0%, #374151 100%);
+  border-left: 8px solid #9a3123;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Jersey Number */
+.jersey-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: 900;
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background-color: #6082c0;
+}
+
+/* Player Info */
+.player-info {
+  padding: 1.5rem;
+  padding-right: 5rem;
+}
+
+.player-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.player-details {
+  flex: 1;
+}
+
+.player-name {
+  color: white;
+  font-weight: 900;
+  font-size: 1.875rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.player-username-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.username-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.code-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #cbd5e1;
+}
+
+.username-badge {
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 0.25rem 0.75rem;
+  border: 2px solid;
+  background-color: rgba(15, 23, 42, 0.5);
+}
+
+/* Dynamic colors for username badges - use with style attribute */
+.username-badge[data-color="red"] {
+  color: #ff0000;
+  border-color: #ff0000;
+}
+
+.username-badge[data-color="orange"] {
+  color: #ff8c00;
+  border-color: #ff8c00;
+}
+
+.username-badge[data-color="violet"],
+.username-badge[data-color="purple"] {
+  color: #aa00aa;
+  border-color: #aa00aa;
+}
+
+.username-badge[data-color="blue"] {
+  color: #0077ff;
+  border-color: #0077ff;
+}
+
+.username-badge[data-color="green"] {
+  color: #00aa00;
+  border-color: #00aa00;
+}
+
+.username-badge[data-color="gray"],
+.username-badge[data-color="grey"] {
+  color: #808080;
+  border-color: #808080;
+}
+
+/* Rank Title */
+.rank-title {
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  padding-left: 1.5rem;
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); */
+  /* border: 2px solid; */
+  /* border-color: #9a3123; */
+}
+
+/* Player Stats */
+.player-stats {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.current-rating-box {
+  background-color: #0f172a;
+  color: white;
+  padding: 1rem;
+  min-width: 90px;
+  border: 2px solid #6082c0;
+}
+
+.peak-rating-box {
+  color: white;
+  padding: 1rem;
+  min-width: 90px;
+  /* border: 2px solid #ebb424; */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background-color: #ebb424;
+}
+
+.peak-rating-value {
+  color: #0f172a;
+}
+
+.rating-value {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.rating-label {
+  color: #e2e8f0;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+/* Bottom Banner */
+.bottom-banner {
+  padding: 1rem 3rem;
+  background: linear-gradient(90deg, #9a3123 0%, #6082c0 100%);
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.trophy-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #ebb424;
+}
+
+.banner-title {
+  color: white;
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.banner-subtitle {
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ebb424;
+}
+
+.banner-right {
+  text-align: right;
+}
+
+.total-power-value {
+  color: white;
+  font-weight: 900;
+  font-size: 2.25rem;
+  letter-spacing: -0.025em;
+}
+
+.total-power-label {
+  color: #e2e8f0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Corner Accents */
+.corner-accent-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-bottom: 80px solid rgba(96, 130, 192, 0.125);
+}
+
+.corner-accent-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-right: 80px solid transparent;
+  border-top: 80px solid rgba(154, 49, 35, 0.125);
+}
+
+/* JSON Helper Section */
+.json-helper {
+  margin-top: 1.5rem;
+}
+
+.json-details {
+  background-color: #1e293b;
+  border-radius: 0.5rem;
+  border: 1px solid #475569;
+}
+
+.json-summary {
+  color: white;
+  font-weight: 700;
+  padding: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.json-content {
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.json-code {
+  color: #4ade80;
+  font-size: 0.75rem;
+  background-color: #0f172a;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.json-note {
+  margin-top: 0.75rem;
+  color: #cbd5e1;
+  font-size: 0.75rem;
+}
+
+.json-note strong {
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .poster-container {
+    padding: 1rem;
+  }
+  
+  .top-section {
+    padding: 1rem 2rem;
+  }
+  
+  .main-grid {
+    padding: 0 2rem 1rem 2rem;
+  }
+  
+  .team-name {
+    font-size: 1.5rem;
+  }
+  
+  .player-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .photo-stats-column {
+    grid-column: span 1;
+  }
+  
+  .players-column {
+    grid-column: span 1;
+  }
+  
+  .top-section {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .team-info {
+    text-align: center;
+  }
+  
+  .team-accent-line {
+    margin: 0.5rem auto 0 auto;
+  }
+  
+  .banner-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .banner-right {
+    text-align: center;
+  }
+}
